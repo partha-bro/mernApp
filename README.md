@@ -59,3 +59,6 @@ MERN App : Mongo + Express + React + Node
 
 - 06-REST
     - Make REST API 
+
+- 07-login/signup
+    - Complete login and signup with proper validation with error throw

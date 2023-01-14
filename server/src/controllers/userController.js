@@ -23,13 +23,6 @@ const getAllUsers = async (req,res) => {
     res.status(200).json({Total: users.length,users})
 }
 
-// Create User
-const postUsers = async (req,res) => {
-    const user = await UserDB.create(req.body)
-    if(!user) throw new CustomError(404, 'No User Created!')
-    res.status(201).json({user, message:'User Created'})
-}
-
 // fetch single user
 const getUser = async (req,res) => {
     const user = await UserDB.findById(req.params.id)
@@ -54,12 +47,37 @@ const deleteUser = async (req,res) => {
     res.status(200).json({user, message:'User Deleted'})
 }
 
+// Create User / Signup
+const register = async (req,res) => {
+    const { name, email, phone, work, password, cnfPassword } = req.body
+    if( !name && !email && !phone && !work && !password && !cnfPassword ) throw new CustomError(400,'Please fill all details!')
+    if(password === cnfPassword){
+        const user = await UserDB.create({ name, email, phone, work, password, cnfPassword })
+        if(!user) throw new CustomError(404, 'No User Created!')
+        res.status(201).json({user, message:'User Created'})
+    }else{
+        throw new CustomError(400,'Doesn\'t Match password! please try again')
+    }
+    
+}
+
+// Login
+const login = async (req,res) => {
+    const { username, password } = req.body
+    if(!username && !password) throw new CustomError(400,'Please Provide all fields!')
+    const user = await UserDB.findOne({name: username})
+    if(!user) throw new CustomError(404,'User Doesn\'t exists! ')
+    if(user.password === password) res.status(200).json({message: 'Login SuccessFully'})
+    else throw new CustomError(400,'Password Error! ')
+}
+
 module.exports = {
     getHome,
     getError,
     getAllUsers,
-    postUsers,
+    register,
     getUser,
     updateUser,
-    deleteUser
+    deleteUser,
+    login
 }
