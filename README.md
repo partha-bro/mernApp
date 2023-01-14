@@ -31,7 +31,7 @@ MERN App : Mongo + Express + React + Node
     └── morgan@1.10.0
 ```
 
-## Project Timeline
+## Project Timeline [ Git Branches ]
 
 - 01-Init
     - Initial Setup of client and server
@@ -47,3 +47,7 @@ MERN App : Mongo + Express + React + Node
 
 - 03-Router
     - Setup Router and controller
+        - not found route
+        - error class
+        - custom error class
+        - express-async-errors package
