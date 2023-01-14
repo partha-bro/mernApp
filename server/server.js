@@ -8,6 +8,7 @@ const connectDB = require('./src/models/config')
 const server = express()
 
 // Middleware
+server.use(express.json())
 server.use(userRouter)
 server.use(notFound)
 server.use(errorMiddleware)

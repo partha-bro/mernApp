@@ -55,4 +55,7 @@ MERN App : Mongo + Express + React + Node
     - express-async-errors package
 
 - 05-Db
-    - Dabase setup and connect
+    - Database setup and connect
+
+- 06-REST
+    - Make REST API 
