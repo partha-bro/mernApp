@@ -1,4 +1,5 @@
 const CustomError = require("../errors/customError")
+const UserModel = require("../models/UserModel")
 
 // Home controller [for developing]
 const getHome = (req,res) => {
@@ -15,7 +16,14 @@ const getError = (req,res) => {
     res.json({message: 'Error message'})
 }
 
+const getAllUsers = async (req,res) => {
+    const users = await UserModel.find({})
+    if(!users) throw new CustomError(500,'No All Users')
+    res.status(200).json({Total: users.length,users})
+}
+
 module.exports = {
     getHome,
-    getError
+    getError,
+    getAllUsers
 }

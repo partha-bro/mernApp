@@ -47,7 +47,12 @@ MERN App : Mongo + Express + React + Node
 
 - 03-Router
     - Setup Router and controller
-        - not found route
-        - error class
-        - custom error class
-        - express-async-errors package
+
+- 04-Mid_Err
+    - not found route
+    - error class
+    - custom error class
+    - express-async-errors package
+
+- 05-Db
+    - Dabase setup and connect
