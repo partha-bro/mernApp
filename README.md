@@ -35,3 +35,12 @@ MERN App : Mongo + Express + React + Node
 
 - 01-Init
     - Initial Setup of client and server
+
+- 02-MVC
+    - MVC architecture style codding 
+        - models
+        - views
+        - controllers
+        - routers
+        - middlewares
+        - errors
