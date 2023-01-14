@@ -31,3 +31,7 @@ MERN App : Mongo + Express + React + Node
     └── morgan@1.10.0
 ```
 
+## Project Timeline
+
+- 01-Init
+    - Initial Setup of client and server
