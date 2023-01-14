@@ -1,5 +1,8 @@
 const express = require('express')
+const userRouter = require('./src/routers/userRouter')
 const server = express()
+
+server.use(userRouter)
 
 const startServer = async () => {
     try {
