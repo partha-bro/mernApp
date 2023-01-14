@@ -1,0 +1,27 @@
+{
+  "name": "mernapp",
+  "version": "1.0.0",
+  "description": "MERN App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd client && npm run dev",
+    "server": "cd server && npm run dev",
+    "start": "concurrently \"npm run client\" \"npm run server\" ",
+    "install": "concurrently \"cd client && npm install\" \"cd server && npm install\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/partha-bro/mernApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/partha-bro/mernApp/issues"
+  },
+  "homepage": "https://github.com/partha-bro/mernApp#readme",
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
