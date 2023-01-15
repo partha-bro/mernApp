@@ -23,10 +23,6 @@ const userSchema = new mongoose.Schema(
         password: {
             type: String,
             required: true
-        },
-        cnfPassword: {
-            type: String,
-            required: true
         }
     },{timestamps:true}
 )

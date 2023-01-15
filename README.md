@@ -58,7 +58,22 @@ MERN App : Mongo + Express + React + Node
     - Database setup and connect
 
 - 06-REST
-    - Make REST API 
+    - Make REST API of CURD opration
 
 - 07-login/signup
     - Complete login and signup with proper validation with error throw
+
+- 08-Auth
+    - Authentication and authorization
+    - jwt token
+    - bcrypt
+    - APIs [routes]
+        - localhost:5000 [endPoint]
+            - getHome: /
+            - getError: /error
+            - login: /login
+            - register: /api/v1/users
+            - allUsers: /api/v1/users       [auth provide]
+            - oneUsers: /api/v1/user/id     [auth provide]
+            - patch: /api/v1/user/id        [auth provide]
+            - delete: /api/v1/user/id       [auth provide]
