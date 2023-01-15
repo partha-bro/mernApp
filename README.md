@@ -18,7 +18,10 @@ MERN App : Mongo + Express + React + Node
     ├── @types/react-dom@18.0.10
     ├── @types/react@18.0.26
     ├── @vitejs/plugin-react@2.2.0
+    ├── axios@1.2.2
+    ├── bootstrap@5.2.3
     ├── react-dom@18.2.0
+    ├── react-router-dom@6.6.2
     ├── react@18.2.0
     └── vite@3.2.5
 - Server
@@ -77,3 +80,6 @@ MERN App : Mongo + Express + React + Node
             - oneUsers: /api/v1/user/id     [auth provide]
             - patch: /api/v1/user/id        [auth provide]
             - delete: /api/v1/user/id       [auth provide]
+
+- 09-staticViews
+    - 

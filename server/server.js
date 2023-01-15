@@ -1,5 +1,6 @@
 require('dotenv').config()
 require('express-async-errors')
+const cors = require('cors')
 const express = require('express')
 const errorMiddleware = require('./src/middlewares/errorMiddleware')
 const notFound = require('./src/middlewares/notFound')
@@ -9,6 +10,7 @@ const server = express()
 
 // Middleware
 server.use(express.json())
+server.use(cors())
 server.use(userRouter)
 server.use(notFound)
 server.use(errorMiddleware)
